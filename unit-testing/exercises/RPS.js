@@ -1,4 +1,12 @@
-function whoWon(player1,player2){
+function whoWon(player1,player2) {
+
+  if (player1 !== "rock" && player1 !== "paper" && player1 !== "scissors") {
+    return "Player 1 did not enter an expected choice...try again"
+  } 
+
+  if (player2 !== "rock" && player2 !=="paper" && player2 !=="scissors") {
+    return "Player 2 did not enter an expected choice...try again"
+  } 
 
    if (player1 === player2){
      return 'TIE!';
@@ -12,9 +20,11 @@ function whoWon(player1,player2){
      return 'Player 2 wins!';
    }
    
-   if (player1 === 'scissors' && player2 === 'rock '){
+   if (player1 === 'scissors' && player2 === 'rock'){
      return 'Player 2 wins!';
    }
  
    return 'Player 1 wins!';
  }
+
+ module.exports = whoWon
