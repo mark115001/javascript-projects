@@ -55,10 +55,11 @@
     miles.innerHTML = parseInt(miles.innerHTML) + heightChange;
     } else {
       let currentPosition = parseInt(rocket.style.bottom);
-      let distanceChange = direction === "left" ? 10 : -10;
-      rocketHeight.style.left = (currentPosition += distanceChange) + "px";
+      let horizontalPosition = direction === "left" ? -10 : 10;
+      rocket.style.left = (currentPosition + horizontalPosition) + "px";
+      }
     }
-  }
+  
 
   buttonUp.addEventListener("click", (event) => {
     if (parseInt(miles.innerHTML) > 240000) {
